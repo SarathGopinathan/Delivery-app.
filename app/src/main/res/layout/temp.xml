@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_content_details"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/rl_nodetails"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/no_route_found"
+                android:id="@+id/emptylist_icon"
+                />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#BCBEC0"
+                android:layout_below="@+id/emptylist_icon"
+                android:text="No route to show!!"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_can_details"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Delivery | 00 cans"
+                android:background="#4fcaf4"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:id="@+id/delivery_cans"
+                />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Returns | 00 cans"
+                android:background="#4fcaf4"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="2.5dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_toRightOf="@id/delivery_cans"
+                android:id="@+id/return_cans"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_details"
+            android:layout_below="@+id/rl_can_details">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_name_address"
+                android:background="#f8f8f8"
+                android:layout_above="@+id/rl_amount">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_icon_watercan"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/watercan"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="40dp"
+                    android:background="#7b7b7b"
+                    android:layout_toRightOf="@+id/watercan"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/line1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp">
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/line1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="20dp"
+                        android:id="@+id/name"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/name"
+                        android:text="Address"
+                        android:id="@+id/address"
+                        />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rl_phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rl_amount">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount:  Rs."
+                    android:id="@+id/text_total_amount"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text_total_amount"
+                    android:id="@+id/amount"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:id="@+id/rl_phone"
+                android:background="#f8f8f8"
+                android:layout_above="@+id/rl_buttons"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/call"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/icon_phone"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="40dp"
+                    android:background="#7b7b7b"
+                    android:layout_toRightOf="@+id/icon_phone"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/line2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp">
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000000000"
+                    android:textSize="20dp"
+                    android:id="@+id/phone"
+                    android:layout_toRightOf="@+id/line2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="20dp"                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/rl_buttons"
+                android:layout_alignParentBottom="true">
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="#6eb2fb"
+                    android:text="Completed"
+                    android:textColor="#ffffff"
+                    android:id="@+id/completed"
+                    android:layout_centerVertical="true"/>
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="#7b7b7b"
+                    android:text="Cancel Order"
+                    android:textColor="#ffffff"
+                    android:id="@+id/cancel"
+                    android:layout_toRightOf="@+id/completed"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

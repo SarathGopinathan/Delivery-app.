@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    sothree:umanoShadowHeight="2dp"
+    sothree:umanoPanelHeight="80dp"
+    android:id="@+id/slide_up_panel"
+    android:gravity="bottom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/rlmapfrag_nodetails"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/no_route_found"
+                android:id="@+id/mapfrag_emptylist_icon"
+                />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#BCBEC0"
+                android:layout_below="@+id/mapfrag_emptylist_icon"
+                android:text="No route to show!!"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_content"
+            android:visibility="visible">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.google.android.gms.maps.SupportMapFragment"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_content_details"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/rl_nodetails"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/no_route_found"
+                android:id="@+id/emptylist_icon"
+                />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#BCBEC0"
+                android:layout_below="@+id/emptylist_icon"
+                android:text="No route to show!!"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_can_details"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Delivery | 00 cans"
+                android:background="#4fcaf4"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:id="@+id/delivery_cans"
+                />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Returns | 00 cans"
+                android:background="#4fcaf4"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="2.5dp"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_toRightOf="@id/delivery_cans"
+                android:id="@+id/return_cans"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_details"
+            android:layout_below="@+id/rl_can_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_name_address"
+                android:orientation="horizontal"
+                android:background="#f8f8f8">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_icon_watercan"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/watercan"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="40dp"
+                    android:background="#7b7b7b"
+                    android:layout_toRightOf="@+id/watercan"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/line1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp">
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/line1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="20dp"
+                        android:id="@+id/name"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/name"
+                        android:text="Address"
+                        android:id="@+id/address"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@id/ll_name_address"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rl_amount">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount:  "
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/text_total_amount"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@android:color/white"
+                    android:layout_toRightOf="@+id/text_total_amount"
+                    android:id="@+id/amount"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:id="@+id/rl_phone"
+                android:background="#f8f8f8"
+                android:layout_below="@+id/rl_amount"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/call"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/icon_phone"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="0.5dp"
+                    android:layout_height="40dp"
+                    android:background="#7b7b7b"
+                    android:layout_toRightOf="@+id/icon_phone"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/line2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp">
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0000000000"
+                    android:textSize="20dp"
+                    android:id="@+id/phone"
+                    android:layout_toRightOf="@+id/line2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="20dp"                />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/rl_phone"
+                android:id="@+id/rl_buttons">
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="#00cf4d"
+                    android:text="Completed"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/completed" />
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="#ff1b20"
+                    android:text="Cancel Order"
+                    android:textColor="#ffffff"
+                    android:id="@+id/cancel"
+                    android:layout_toRightOf="@+id/completed"
+                    android:layout_marginLeft="10dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

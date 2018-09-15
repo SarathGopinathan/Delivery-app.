@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:src="@mipmap/profile_bg"
+                android:scaleX="1.7"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:id="@+id/rl_dp">
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/grey_circle"
+                    android:alpha="0.5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true">
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/default_dp"
+                    android:id="@+id/dp"
+                    android:background="@drawable/white_circle"/>
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_dp"
+                android:text="Name"
+                android:id="@+id/username"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/username"
+                android:text="ID Number: 0000"
+                android:textAlignment="center"
+                android:id="@+id/userid"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/userid"
+                android:text="Total delivered cans"
+                android:textColor="#000000"
+                android:textAlignment="center"
+                android:id="@+id/profilescore"
+                android:textSize="20dp"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/profilescore"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:id="@+id/total_del_cans"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/green_rounded_rectangle"
+                android:text="EMERGENCY CALL"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:id="@+id/emergency"
+                android:layout_below="@+id/total_del_cans"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/grey_rounded_rectangle"
+                android:text="LOG OUT"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:id="@+id/log_out"
+                android:layout_below="@+id/emergency"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
